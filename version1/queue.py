@@ -2,7 +2,7 @@ class Queue:
     def __init__(self):
         self.queue = []
 
-    def enqueue(self, element):
+    def push(self, element):
         self.queue.append(element)
 
     def isEmpty(self):
@@ -10,11 +10,11 @@ class Queue:
     
     def size(self): return len(self.queue)
 
-    def dequeue(self):
+    def pop(self):
         if not self.isEmpty():
             return self.queue.pop(0)
         return "Queue is empty"
     
-    def peek(self):
+    def front(self):
         if self.isEmpty(): return "Queue is empty"
         return self.queue[0]

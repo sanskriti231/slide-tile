@@ -4,7 +4,7 @@ from shuffle import *
 def printTile(state, n):
     for i in range(n * n):
         print(state[i], end="\t")
-        if (i + 1) % 3 == 0: print()
+        if (i + 1) % n == 0: print()
 
 n = 3
 null_pos = [2,2]

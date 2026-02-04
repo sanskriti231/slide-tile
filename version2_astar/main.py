@@ -1,5 +1,6 @@
 import sys
 from shuffle import *
+from astar import astar
 
 n = int(sys.argv[1])
 if n < 2: 
@@ -16,3 +17,6 @@ null_pos = n*n - 1
 initial_state, null_pos = shuffle(target_state, null_pos, n)
 print(initial_state)
 printTile(initial_state, n)
+print()
+print(astar(initial_state, n))
+# printTile(astar(initial_state, n), n)

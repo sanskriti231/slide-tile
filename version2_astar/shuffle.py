@@ -11,9 +11,9 @@ def shuffle(state, null_pos, n):
         if row < n - 1: moves.append(n) #down
         if col > 0: moves.append(-1) #left
         if col < n - 1: moves.append(1) #right
-        ran_action = random.randint(0, len(moves) - 1)
+        ran_action = random.choice(moves)
         x = null_pos
-        new_x = x + moves[ran_action]
+        new_x = x + ran_action
 
         state[x], state[new_x] = state[new_x], state[x]
         null_pos = new_x
